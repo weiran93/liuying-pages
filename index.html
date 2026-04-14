@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>留影相册</title>
+  <style>
+    :root {
+      --bg: #f3f0ea;
+      --card: rgba(255, 255, 255, 0.84);
+      --text: #2f2a26;
+      --muted: #6f6862;
+      --line: rgba(47, 42, 38, 0.12);
+      --accent: #8f6d53;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(213, 200, 185, 0.48), transparent 34%),
+        linear-gradient(180deg, #f4efe7 0%, #f7f4ef 50%, #efe8de 100%);
+      padding: 24px;
+    }
+    .card {
+      width: min(680px, 100%);
+      padding: 36px 28px;
+      border-radius: 28px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 24px 60px rgba(55, 43, 31, 0.08);
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 6vw, 44px);
+      line-height: 1.1;
+    }
+    p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+    .links {
+      display: grid;
+      gap: 14px;
+      margin-top: 28px;
+    }
+    a {
+      display: block;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.66);
+      border: 1px solid var(--line);
+      color: inherit;
+      text-decoration: none;
+      font-size: 16px;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+    a:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(55, 43, 31, 0.08);
+    }
+    strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 17px;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <p class="eyebrow">Liuying Album</p>
+    <h1>留影相册</h1>
+    <p>这里是留影相册的公开页面入口。你可以在下面查看隐私政策与技术支持信息。</p>
+    <div class="links">
+      <a href="./privacy-policy.html">
+        <strong>隐私政策</strong>
+        查看留影相册如何处理照片权限与相关信息
+      </a>
+      <a href="./support.html">
+        <strong>技术支持</strong>
+        查看常见问题、权限说明与联系方式
+      </a>
+    </div>
+  </main>
+</body>
+</html>
